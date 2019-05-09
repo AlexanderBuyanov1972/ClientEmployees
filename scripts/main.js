@@ -1,6 +1,2 @@
-const employees = new App.Employees();
-const company = new App.Company("Orange",employees);
-function createEmployee(id,email,gender,salary,name,title) {
-    return {id,email,gender,salary,name,title};
-}
-
+let employees = new App.Employees();
+let company = new App.Company('TelRan',employees);
