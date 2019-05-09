@@ -4,41 +4,43 @@
 
         function Employees() {
             this.salary = 0;
-            this.data = {};
-        }
-        Employees.prototype.getSalary = function(){
-            return this.salary;
+            this.employees = {};
         }
 
         Employees.prototype.add = function (id, employee) {
-            if (this.data[id]) {
+            if (this.employees[id]) {
                 return false;
             }
-            this.data[id] = employee;
+            this.employees[id] = employee;
             this.salary += employee.salary;
             return true;
         }
+
         Employees.prototype.get = function (id) {
-            let result = this.data[id];
+            let result = this.employees[id];
             if (result)
                 return result;
             return {};
         }
         Employees.prototype.remove = function (id) {
-            let result = this.data[id];
+            let result = this.employees[id];
             if (result) {
-                delete this.data[id];
+                delete this.employees[id];
                 return true;
             }
             return false;
         }
 
         Employees.prototype.getAll = function () {
-            return this.data;
+            return Object.values(this.employees);
         }
 
         Employees.prototype.removeAll = function () {
-            this.data = {};
+            this.employees = {};
+        }
+
+        Employees.prototype.getSalary = function(){
+            return this.salary;
         }
 
         App.Employees = Employees;
