@@ -26,6 +26,12 @@
                 // this.elements[0].focus();
             });
         }
+        FormHandler.prototype.addInputHandler=function(validData,selector){
+            this.$elementForm.on('input',selector,function (event) {
+                event.target.setCustomValidity(validData(event.target.value));
+            });
+        }
+
 
         App.FormHandler = FormHandler;
         window.App = App;

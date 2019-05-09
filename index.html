@@ -14,12 +14,12 @@
                 <h1>Employee</h1>
                 <div class="">
                     <label for="id">Id employee
-                        <input type="text" class="form-control" id="id" name="id" placeholder="id">
+                        <input type="text" class="form-control" id="id" name="id" placeholder="id" required data-employee-role="id_input">
                     </label>
                 </div>
                 <div class="">
                     <label for="name">Name employee
-                        <input type="text" class="form-control" id="name" name="name" placeholder="name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="name" required>
                     </label>
                 </div>
                 <div class="form-check">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="salary">
                     <label for="salary">Salary employee
-                        <input type="text" class="form-control" id="salary" name="salary" placeholder="salary" required>
+                        <input type="text" class="form-control" id="salary" name="salary" placeholder="salary" data-employee-role="salary_input" required>
                     </label>
                 </div>
                 <div class="company">
@@ -66,8 +66,26 @@
         </div>
     </div>
 </div>
-
-
+<div class="card">
+    <div class="card-body">
+        <h4>Company's budget salary.</h4>
+        <div class="">
+            <span class="form-control" data-budget-role="budget"></span>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h4>Pending employees</h4>
+        <div data-employee-list="list">
+            <!--            <div class="form-check" data-employee-role="checkbox">-->
+            <!--                <label class="form-check-label">-->
+            <!--                    <input class="form-check-input" type="checkbox" value="id">-->
+            <!--                </label>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -77,6 +95,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script src="scripts/budgetcompany.js"></script>
+<script src="scripts/checklist.js"></script>
 <script src="scripts/formhandler.js"></script>
 <script src="scripts/employees.js"></script>
 <script src="scripts/company.js"></script>
